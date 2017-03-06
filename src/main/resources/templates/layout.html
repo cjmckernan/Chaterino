@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head th:fragment="site-head">    
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+    <script src="../static/js/jquery-3.1.0.min.js" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <meta th:include="this :: head" th:remove="tag"/>
+</head>
+<body>
+    <header th:fragment="site-header">
+        <nav>
+        <div class="nav-wrapper black">
+        <a href="#" class="brand-logo right">Chaterino.tech</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="#">Home</a></li>            
+                <li><a href="#">About</a></li>            
+                <li><a href="#">CVs</a></li>            
+                <li><a href="#">Login</a></li>            
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <footer th:fragment="site-footer" class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Chaterino Tech </h5>
+                     <p class="grey-text text-lighten-4">Chaterino tech owned by qbit, zergless, strobe.</p>
+              </div> 
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/cjmckernan">Qbit Git</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/zergless">Zergless Git</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://github.com/seanbourkemckenna">Strobe Git</a></li>
+                </ul>
+              </div>
+             </div>
+            </div>
+    </footer>
+</body>
+</html>
