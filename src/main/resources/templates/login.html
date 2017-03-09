@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+    <title>Index Page</title>
+</head>
+
+<body>
+
+<header th:replace="layout :: site-header" />
+<main>
+    
+    <div class="row">
+        <form class="col s12">
+            <div class="input-field col s12">
+                <input id="username" type="text" class="validate" />
+                <label for="username">Username</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate" />
+                <label for="password">Password</label>
+            </div>
+            <div class="col s12">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+              </button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer th:replace="layout :: site-footer" />
+</body>
+</html> 
