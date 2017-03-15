@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head th:fragment="site-head">   
+
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}" />
     <script src="../static/js/jquery-3.1.0.min.js" th:src="@{/js/jquery-3.1.1.min.js}"></script>
+    <script src="../static/js/app.js" th:src="@{/js/app.js}"></script>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
     <meta th:include="this :: head" th:remove="tag"/>
 </head>
 <body>
     <header th:fragment="site-header">
+        <div class="navbar-fixed">
         <nav>
         <div class="nav-wrapper black">
-        <a th:href="@{/}" class="brand-logo right">Chaterino.tech</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Home</a></li>            
+        <a th:href="@{/}" class="brand-logo left">Chaterino.tech</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a th:href="@{/}">Home</a></li>
                 <li><a href="#">About</a></li>            
-                <li><a href="#">CVs</a></li>            
-                <li><a th:href="@{/login}">Login</a></li>            
+                <li><a href="">CVs</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
             </ul>
             </div>
         </nav>
+        </div>
     </header>
 
     <footer th:fragment="site-footer" class="page-footer black">
